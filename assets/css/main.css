@@ -1,0 +1,465 @@
+body {
+    background-color: var(--black);
+    color: var(--white);
+    /* overflow: hidden; */
+    /* height: 100vh; */
+}
+.container {
+    /* position: relative; */
+
+
+    .left-side {
+        padding: 2px 24px 0 0;
+        width: 275px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        /* left: 0; */
+        /* float: left; */
+
+        .logo {
+            width: 50px; 
+            height: 50px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-bottom: 30px;
+
+            &:hover {
+                background-color: var(--hover-black-color);
+            }
+
+            & img {
+                width: 24px;
+                height: 24px;
+                object-fit: cover;
+            }
+        }
+        .links {
+
+            .link {
+                padding: 14px;
+                border-radius: 99px;
+                width: max-content;
+                margin-bottom: 8px;
+
+                &:hover {
+                    background-color: var(--hover-black-color);
+                }
+                .icon {
+                    width: 24px;
+                    height: 24px;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                &:nth-child(1) .icon {
+                    background-image: url(../icons/Home-Fill.svg);
+                }
+                &:nth-child(2) .icon {
+                    background-image: url(../icons/Explore.svg);
+                }
+                &:nth-child(3) .icon {
+                    background-image: url(../icons/Notifications.svg);
+                    position: relative;
+
+                    &::after {
+                        content: "1";
+                        position: absolute;
+                        right: -3px;
+                        top: -6px;
+                        font-size: 11px;
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        background-color: var(--blue);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                &:nth-child(4) .icon {
+                    background-image: url(../icons/Messages.svg);
+                }
+                &:nth-child(5) .icon {
+                    background-image: url(../icons/Bookmarks.svg);
+                }
+                &:nth-child(6) .icon {
+                    background-image: url(../icons/Lists.svg);
+                }
+                &:nth-child(7) .icon {
+                    background-image: url(../icons/Profile.svg);
+                }
+                &:nth-child(8) .icon {
+                    background-image: url(../icons/More.svg);
+                }
+                & p{
+                    margin: 0 16px 0 20px;
+                }
+            }
+            & button {
+                background-color: var(--blue);
+                border-radius: 99px;
+                padding: 16px 86px;
+                color: var(--white);
+                cursor: pointer;
+                margin-top: 16px;
+
+                &:hover {
+                    background-color: var(--hover-blue-color);
+                }
+            }
+        }
+        .account {
+            padding: 12px;
+
+            .account-photo {
+                width: 40px;
+                height: 40px;
+                overflow: hidden;
+                border-radius: 50%;
+                margin-right: 12px;
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .account-data {
+                & > p {
+                    color: var(--dark-gray);
+                }
+                & > div {
+                    & p {
+                        color: var(--light-gray);
+                    }
+                    .icon {
+                        width: 20px;
+                        height: 20px;
+                        background-size: contain;
+                        background-image: url(../icons/Private.svg);
+                        margin-left: 2px;
+                    }
+                }
+            }
+            .more {
+                width: 20px;
+                height: 20px;
+                background-image: url(../icons/More-2.svg);
+                background-size: contain;
+                margin-left: 7px;
+            }
+        }
+    }
+
+    .content {
+        flex-grow: 1;
+        /* padding: 0 16px; */
+        border-right: 1px solid var(--border-color);
+        border-left: 1px solid var(--border-color);
+
+        .content-header {
+            padding: 16px ;
+
+            .icon {
+                width: 34px;
+                height: 34px;
+                background-image: url(../icons/Timeline-Prop.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        .content-body {
+
+            .new-post , .post{
+                
+                padding: 4px 16px;
+                .post-img {
+                    width: 48px;
+                    height: 48px;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    margin-right: 12px;
+
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .post-body {
+                    width: 100%;
+
+                    .post-header {
+    
+                        & input {
+                            color: var(--dark-gray);
+                        }
+                        
+                    }
+                    .post-footer {
+                            margin-top: 35px;
+    
+                        .icons {
+                            gap: 16px;
+    
+                            .icon {
+                                width: 20px;
+                                height: 20px;   
+                                background-position: center;
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                cursor: pointer;
+                            }
+                            .icon:nth-child(1) {
+                                background-image: url(../icons/Media.svg);
+                            }
+                            .icon:nth-child(2) {
+                                background-image: url(../icons/Gif.svg);
+                            }
+                            .icon:nth-child(3) {
+                                background-image: url(../icons/Poll.svg);
+                            }
+                            .icon:nth-child(4) {
+                                background-image: url(../icons/Emoji.svg);
+                            }
+                            .icon:nth-child(5) {
+                                background-image: url(../icons/Schedule.svg);
+                            }
+                        }
+                        .tweet {
+                            & button {
+                                background-color: #0e4d78;
+                                padding: 9px 16px;
+                                color: var(--dark-gray);
+                                border-radius: 99px;
+                            }
+                        }
+                    }
+                }
+            }
+            .post {
+                padding: 12px 16px;
+
+
+                .post-body {
+
+                    .head-text {
+                        margin-bottom: 7px;
+                        .icon {
+                            width: 20px;
+                            height: 20px;
+                            background-size: contain;
+                            background-image: url(../icons/Verified.svg);
+                            margin: 0 4px 0 2px;
+                        }
+                        & p:last-child {
+                            color: var(--dark-gray);
+                        }
+                    }
+                    .body-text {
+                        margin-bottom: 12px;
+
+                        .post-img {
+                            width: 100%;
+                            height: 280px;
+                            overflow: hidden;
+                            border-radius: 36px;
+                            margin: 12px 0;
+                            border: 1px solid var(--border-color);
+
+                            & img {
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                    .footer-text {
+                        margin-bottom: 12px;
+                        & p {
+                            font-size: 13px;
+                            color: var(--dark-gray);
+                            margin-right: 65px;
+                        }
+                        .icon {
+                            width: 20px;
+                            height: 20px;
+                            background-size: contain;
+                            margin-right: 19px;
+                            /* background-image: url(../icons/Verified.svg); */
+                            /* margin: 0 4px 0 2px; */
+                        }
+                        & div:nth-child(1) .icon {
+                            background-image: url(../icons/Reply.svg);
+                        }
+                        & div:nth-child(2) .icon {
+                            background-image: url(../icons/Retweet.svg);
+                        }
+                        & div:nth-child(3) .icon {
+                            background-image: url(../icons/React.svg);
+                        }
+                        & div:nth-child(4) .icon {
+                            background-image: url(../icons/Share.svg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .right-side {
+        padding: 6px 0 0 30px;
+        /* min-width: 350px; */
+        /* flex-grow: 1; */
+
+        .search {
+            padding: 12px;
+            background-color: var(--light-black);
+            border-radius: 99px;
+            margin-bottom: 12px;
+
+            .icon {
+                background-image: url(../icons/Search.svg);
+                width: 18px;
+                height: 18px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            & input {
+                color: var(--white);
+                margin-left: 24px;
+                width: 100%;
+            }
+        }
+        .trends , .follow{
+            background-color: var(--light-black);
+            border-radius: 15px;
+            padding: 0 16px;
+            margin-bottom: 16px;
+
+            .trends-header, .follow-header {
+                padding: 16px 0;
+
+                .icon {
+                    width: 20px;
+                    height: 20px;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-image: url(../icons/Settings.svg);
+                    margin-right: 14px;
+                    cursor: pointer;
+                }
+            }
+            .trends-body {
+
+                .trend {
+                    padding: 12px 0;
+                    
+                    & p {
+                        margin: 4px 0;
+                        line-height: 18px;
+
+                        &:first-child {
+                            margin-top: 0;
+                            font-size: 13px;
+                            color: var(--dark-gray);
+                            line-height: 16px;
+                        }
+                        &:last-child {
+                            margin-bottom: 0;
+                            font-size: 13px;
+                            color: var(--dark-gray);
+                            line-height: 16px;
+                        }
+                    }
+                    .icon {
+                        background-image: url(../icons/More-2.svg);
+                        width: 18px;
+                        height: 18px;
+                        background-size: contain;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .trends-footer, .follow-footer {
+                padding: 16px 0;
+
+                & a {
+                    color: var(--blue);
+                }
+            }
+        }
+        .follow {
+
+            .follow-body {
+                
+                .follower {
+                    padding: 12px 0;
+                    width: max-content;
+
+                    .profile-img {
+                        width: 48px;
+                        height: 48px;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        margin-right: 12px;
+
+                        & img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .profile-text {
+                        
+                        & > p {
+                            color: var(--dark-gray);
+                            line-height: 18px;
+                        }
+                        & > div {
+                            & p {
+                                line-height: 18px;
+                                color: var(--light-gray);
+                            }
+                            .icon {
+                                background-image: url(../icons/Verified.svg);
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                width: 20px;
+                                height: 20px;
+                                margin-left: 3px;
+                            }
+                        }
+                    }
+                    & button {
+                        color: var(--black);
+                        background-color: var(--light-gray);
+                        border-radius: 99px;
+                        padding: 7px 15px;
+                        font-size: 14px;
+                        margin-left: 17px;
+                    }
+                }
+            }
+        }
+        .footer-links {
+            padding: 0 16px;
+
+            & div {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            & a {
+                color: var(--dark-gray);
+                font-size: 13px;
+                line-height: 16px;
+                
+                &:hover {
+                    border-bottom: 1px solid var(--dark-gray);
+                }
+            }
+        }
+    }
+}
